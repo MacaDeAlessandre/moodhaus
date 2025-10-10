@@ -1,0 +1,61 @@
+.nav-container {
+    background-color: #7A9E7E;
+    height: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.brand-logo {
+    width: 170px;
+}
+
+.divider-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+.nav-category {
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+    color: #050505;
+    text-decoration: none;
+    transition: ease-in 0.2s;   
+}
+
+.nav-category:hover {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 123px;
+    height: 110px;
+}
+
+.cart-container img {
+    width: 30px;
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: center;
+}
+
+.counter-badge {
+    color: #050505;
+    font-family: 'poppins', sans-serif;
+    font-size: 13px;
+    /* font-weight: bold; */
+    text-align: center;
+    background-color: red;
+    border-radius: 100%;
+    width: 17px;
+    height: 17px;
+    grid-area: 2 / 2 / 3 / 3;
+    justify-self: end;
+    z-index: 1;
+}
