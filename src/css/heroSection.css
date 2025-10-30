@@ -1,0 +1,22 @@
+.hero-section {
+    font-family: 'poppins', sans-serif;
+    background-color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #050505;
+}
+
+
+.hero-section h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #050505;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #050505;
+    font-style: italic;
+}

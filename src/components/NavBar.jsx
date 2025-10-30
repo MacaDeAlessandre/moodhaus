@@ -1,4 +1,5 @@
 import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom';
 import '../css/navbar.css'
 
 const NavBar = () => {
@@ -6,11 +7,13 @@ const NavBar = () => {
     return (
         <>
             <nav className="nav-container">
-                <img className="brand-logo" src="../brand-logo.png" alt="Logo de MoodHaus"/>   
+                <NavLink to='/'>
+                <img className="brand-logo" src="../brand-logo.png" alt="Logo de MoodHaus"/> 
+                </NavLink>  
                 <div className='divider-container'>
-                    <a className="nav-category" href="">Estilo Boho Chic</a>
-                    <a className="nav-category" href="">Estilo Industrial Moderno</a>
-                    <a className="nav-category" href="">Estilo Retro Pop</a>
+                    <NavLink className="nav-category" to='/category/Iluminación'>Iluminación</NavLink>
+                    <NavLink className="nav-category" to='/category/Sillas y sillones'>Sillas y sillones</NavLink>
+                    <NavLink className="nav-category" to='/category/Deco'>Deco</NavLink>
                 </div>
                 <CartWidget/>
             </nav>
