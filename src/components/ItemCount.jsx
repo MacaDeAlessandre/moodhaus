@@ -2,11 +2,10 @@ import { useState, useEffect } from 'react'
 import '../css/itemCount.css'
 
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdd}) => {
 const [count, setCount] = useState(1);
-const [addToCart, setAddToCart] = useState(false);
 
-const addItems = () => {
+const sumItems = () => {
     if (count < stock) {
         setCount(count + 1);
     }
@@ -18,26 +17,18 @@ const subtractItems = () => {
     }
 };
 
-// CONTINUAR CON ESTA FUNCIÓN Y EL USEEFFECT PARA EL PROYECTO FINAL
-
-const addItemsToCart = () => {
-    if (addToCart) {
-        setAddToCart()
-    }
+const addToCart = () => {
+    onAdd(count);
 }
-
-useEffect(() => {
-
-},[addToCart]);
 
     return (
         <>
         <div className="item-counter">
             <button className="btn-subtract" onClick={subtractItems} disabled={count === 0}>-</button>
             <span className="counter">{count}</span>
-            <button className="btn-add" onClick={addItems}>+</button>
+            <button className="btn-add" onClick={sumItems}>+</button>
         </div>
-        <button className="btn-addToCart" onClick={addItemsToCart}>Agregar al carrito</button>
+        <button className="btn-add-to-cart" onClick={addToCart} disabled={count === 0 || stock === 0} >Agregar al carrito</button>
         </>
     )
 };

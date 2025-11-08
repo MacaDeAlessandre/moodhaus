@@ -68,6 +68,26 @@
     color: #050505;
 }
 
+.btn-finish-order {
+    font-family: 'Poppins', sans-serif;
+    background-color: #a398c1;
+    color: white;
+    width: fit-content;
+    justify-self: center;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 0;
+}
+
+.btn-finish-order:hover {
+    background-color: #8e85b0;
+}
+
 .item-count {
     justify-self: center;
     display: flex;
