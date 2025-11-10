@@ -7,7 +7,7 @@ const Error = () => {
         <div className="error-container">
             <MdErrorOutline className="error-icon" />
             <p className="error-message">Ups! La página que buscas no existe.</p>
-            <Link className='btn-back-from-error' to='/'>Volver al Inicio</Link>
+            <Link className='btn-primary' to='/'>Volver al Inicio</Link>
         </div>
     )
 }

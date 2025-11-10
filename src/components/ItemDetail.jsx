@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 const ItemDetail = ({ detail }) => {
 
-    const {addItem} = useContext(CartContext);
+    const { addItem } = useContext(CartContext);
     const [quantityAdded, setQuantityAdded] = useState(0);
 
     const onAdd = (quantity) => {
@@ -18,22 +18,24 @@ const ItemDetail = ({ detail }) => {
 
     return (
         <div className='section-item-detail'>
-            <Link className='btn-back-to-home' to='/'>
-            <FaArrowLeft />
-            <p className='btn-label'>Volver al Home</p>
+            <Link to='/' className='btn-back-to-home'>
+                <FaArrowLeft className='btn-arrow-icon' />
+                <p className='btn-label'>Volver al Home</p>
             </Link>
             <div className="item-detail">
-                <img className="item-detail-img" src={detail.img} alt={detail.name} />
-                <div className="item-detail-info">
-                    <h1 className="item-detail-title">{detail.name}</h1>
-                    <p className="item-detail-description">{detail.description}</p>
-                    <p className="item-detail-price">${detail.price}</p>
+                <div className='item-info'>
+                    <img className="item-detail-img" src={detail.img} alt={detail.name} />
+                    <div className="item-detail-info">
+                        <h1 className="item-detail-title">{detail.name}</h1>
+                        <p className="item-detail-description">{detail.description}</p>
+                        <p className="item-detail-price">${detail.price}</p>
+                    </div>
                 </div>
                 <>
                     {
-                        quantityAdded > 0 ? <Link className="btn-finish-order" to='/cart'>Finalizar compra</Link> : <div className="item-count">
-                    <ItemCount stock={detail.stock} onAdd={onAdd}/>
-                </div>
+                        quantityAdded > 0 ? <Link className="btn-primary" to='/cart'>Finalizar compra</Link> : <div className="item-count">
+                            <ItemCount stock={detail.stock} onAdd={onAdd} />
+                        </div>
                     }
                 </>
 

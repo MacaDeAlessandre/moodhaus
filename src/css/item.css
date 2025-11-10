@@ -39,19 +39,8 @@
     margin: 0.3rem 0;
 }
 
-.btn-detail {
-    background-color: #a398c1;
-    text-decoration: none;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease;
+.item-card .btn-primary {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
     margin-top: 0.8rem;
-}
-
-.item-card button:hover {
-    background-color: #8f7cc2;
 }

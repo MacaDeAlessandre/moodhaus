@@ -1,10 +1,16 @@
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .item-counter {
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 1.0rem;
-    margin: 0;
+    margin-bottom: 17px;
 }
 
 .counter {
@@ -12,7 +18,8 @@
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
-    width: 63px;
+    width: 67px;
+    height: 42px;
     background-color: white;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     border-radius: 6px; 
@@ -41,20 +48,6 @@
     cursor: not-allowed;
 }
 
-.btn-add-to-cart {
-    font-family: 'Poppins', sans-serif;
-    background-color: #a398c1;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s ease;
+.item-container .btn-primary {
     margin: 0;
-}
-
-.btn-addToCart:hover {
-    background-color: #8e85b0;
 }

@@ -22,21 +22,7 @@
     margin-bottom: 1.5rem;
 }
 
-.btn-back-from-error {
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    background-color: #a398c1;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
+.error-container .btn-primary {
+    padding: 0.6rem 1rem !important;
     margin: 10px auto;
-    transition: 0.3s ease;
-}
-
-.btn-back-from-error:hover {
-    background-color: #8e85b0;
 }
