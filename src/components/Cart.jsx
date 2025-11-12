@@ -24,9 +24,9 @@ const Cart = () => {
 
                     <div className="cart-summary">
                         <p className="total">Total a pagar: ${totalOrder().toLocaleString('es-AR')}</p>
-                        <button className='btn-primary'>
+                        <Link className='btn-primary' to='/checkout'>
                             Terminar compra
-                        </button>
+                        </Link>
                     </div>
 
                     <button className='btn-danger' onClick={clear}>
