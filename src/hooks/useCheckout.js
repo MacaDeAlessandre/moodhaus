@@ -7,6 +7,7 @@ export const useCheckout = () => {
     const { cart, totalOrder, clear } = useContext(CartContext);
     const [buyer, setBuyer] = useState({});
     const [orderId, setOrderId] = useState(null);
+    const [checkoutError, setCheckoutError] = useState(null);
     const [errorMessage, setErrorMessage] = useState("");
 
     const buyerData = (e) => {
@@ -37,7 +38,10 @@ export const useCheckout = () => {
 
             addDoc(sales, finalOrder)
                 .then((res) => setOrderId(res.id))
-                .catch((error) => console.log(error));
+                .catch((error) => {
+                    console.log(error)
+                    setCheckoutError(true);
+                });
         }
     };
 
@@ -54,5 +58,6 @@ export const useCheckout = () => {
         buyerData,
         finishOrder,
         errorMessage,
+        checkoutError,
     };
 };

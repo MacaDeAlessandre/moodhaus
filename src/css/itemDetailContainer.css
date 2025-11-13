@@ -1,40 +1,46 @@
-.item-list-container {
-    font-family: 'poppins', sans-serif;
-    background-color: #fffaed;
+.invalid-product {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
-.item-list-container h1 {
-    padding: 10px;
+.invalid-product h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #050505;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 14px;
 }
 
-.item-list-container h2 {
-    padding: 10px;
+.btn-primary {
+    display: inline-block;
 }
 
-.item-list-error .fetch-error-message {
+.item-detail-error .fetch-error-message {
     font-family: 'poppins', sans-serif;
     background-color: #fffaed;
     color: #050505;
     text-align: center;
-    min-height: 50vh;       
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
     margin-bottom: 20px;
+    margin-top: 71px;
 }
 
 .error-icon {
     font-size: 5rem;
     color: #050505;
-    align-self: center; 
+    align-self: center;
     margin-bottom: 1rem;
 }
-
 
 .fetch-error-message h2 {
     font-size: 1.7rem;

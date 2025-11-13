@@ -26,7 +26,7 @@ const addToCart = () => {
         <div className="item-counter">
             <button className="btn-subtract" onClick={subtractItems} disabled={count === 0}>-</button>
             <span className="counter">{count}</span>
-            <button className="btn-add" onClick={sumItems}>+</button>
+            <button className="btn-add" onClick={sumItems} disabled={count === stock}>+</button>
         </div>
         <button className="btn-primary" onClick={addToCart} disabled={count === 0 || stock === 0} >Agregar al carrito</button>
         </div>

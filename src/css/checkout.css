@@ -1,0 +1,48 @@
+.checkout-page {
+    min-height: 70vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.checkout-error-container,
+.checkout-success-container {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffaed;
+    color: #050505;
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    margin-top: 71px;
+    margin-bottom: 20px;
+}
+
+.error-icon,
+.success-icon {
+    font-size: 5rem;
+    color: #050505;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+.checkout-error-container h2,
+.checkout-success-container h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.75rem;
+}
+
+.checkout-error-container p,
+.checkout-success-container p {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+.checkout-success-container .btn-primary {
+    width: fit-content;
+    align-self: center;
+}
