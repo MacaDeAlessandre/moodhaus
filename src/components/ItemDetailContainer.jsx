@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getSingleProduct } from '../mock/AsyncService';
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
