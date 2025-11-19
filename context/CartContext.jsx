@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Swal from 'sweetalert2';
 import { createContext } from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
+    const persistentCart = JSON.parse(localStorage.getItem("Productos agregados al carrito")) || [];
+    const [cart, setCart] = useState(persistentCart);
 
-    const [cart, setCart] = useState([]);
+    useEffect(() => {
+        localStorage.setItem("Productos agregados al carrito", JSON.stringify(cart))
+    }, [cart])
 
     const addItem = (item, qty) => {
         if (isInCart(item.id)) {
@@ -26,6 +31,26 @@ export const CartProvider = ({ children }) => {
         setCart(cart.filter((product) => product.id !== id));
     }
 
+    const confirmClear = () => {
+        Swal.fire({
+            icon: 'question',
+            title: "¿Querés vaciar el carrito?",
+            text: "Esta acción eliminará todos los productos.",
+            showDenyButton: true,
+            confirmButtonText: "Sí",
+            denyButtonText: `No`,
+            customClass: {
+                title: 'swal-title',
+                content: 'swal-content',
+                confirmButton: 'swal-confirm',
+                denyButton: 'swal-deny'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                clear();
+            };
+        });
+    }
     const clear = () => {
         setCart([]);
     }
@@ -49,7 +74,7 @@ export const CartProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, isInCart, totalOrder, calcItemsQty }}>
+        <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, isInCart, totalOrder, calcItemsQty, confirmClear }}>
             {children}
         </CartContext.Provider>
     )

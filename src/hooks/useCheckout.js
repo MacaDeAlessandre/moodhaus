@@ -42,6 +42,8 @@ export const useCheckout = () => {
                     console.log(error)
                     setCheckoutError(true);
                 });
+            
+            localStorage.removeItem("Productos agregados al carrito");
         }
     };
 

@@ -6,6 +6,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { db } from "../service/firebase";
 import { MdErrorOutline } from "react-icons/md";
+import { CartContext } from '../../context/CartContext';
+import { useContext } from "react";
 import '../css/itemDetailContainer.css'
 
 const ItemDetailContainer = () => {
@@ -13,6 +15,7 @@ const ItemDetailContainer = () => {
     const [loader, setLoader] = useState(false);
     const [invalid, setInvalid] = useState(null);
     const [fetchError, setFetchError] = useState(false);
+    const {cart} = useContext(CartContext);
     const param = useParams();
     const id = param.id;
 
@@ -34,11 +37,23 @@ const ItemDetailContainer = () => {
             .finally(() => setLoader(false));
     }, [id]);
 
+    const updateAvailableStock = () => {
+        let actualStock;
+        const matchedProduct = cart.find((product) => detail.id === product.id);
+        if (matchedProduct) {
+            actualStock = detail.stock - matchedProduct.quantity;
+        } else {
+            actualStock = detail.stock;
+        }
+
+        return actualStock;
+    }
+
     return (
         <>
             {loader && <Loader loading={loader} />}
 
-            {!fetchError && !invalid && <ItemDetail detail={detail} />}
+            {!fetchError && !invalid && <ItemDetail detail={detail} updateAvailableStock={updateAvailableStock}/>}
 
             {!fetchError && invalid && (
                 <div className="invalid-product">

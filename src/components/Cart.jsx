@@ -3,9 +3,10 @@ import { useContext } from "react";
 import { Link } from 'react-router-dom';
 import CartView from './CartView';
 import '../css/cart.css';
+import '../css/sweetalert2-styles.css';
 
 const Cart = () => {
-    const { cart, totalOrder, clear } = useContext(CartContext);
+    const { cart, totalOrder, confirmClear } = useContext(CartContext);
 
     return (
         <div className="cart-page">
@@ -29,7 +30,7 @@ const Cart = () => {
                         </Link>
                     </div>
 
-                    <button className='btn-danger' onClick={clear}>
+                    <button className='btn-danger' onClick={confirmClear}>
                         Vaciar carrito
                     </button>
                 </div>

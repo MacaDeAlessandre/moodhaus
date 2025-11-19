@@ -1,0 +1,20 @@
+.swal2-html-container {
+    font-family: 'poppins', sans-serif !important;
+}
+
+.swal-title {
+    font-family: 'poppins', sans-serif !important;
+    font-size: 22px;
+    font-weight: bold;
+    color: #050505;
+}
+
+.swal-confirm {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.swal-deny {
+    background-color: #f44336 !important;
+    color: white !important;
+}
