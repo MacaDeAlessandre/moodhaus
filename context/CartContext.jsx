@@ -27,8 +27,33 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    const confirmRemoveItem = (id) => {
+        Swal.fire({
+            icon: 'question',
+            title: "¿Querés eliminar el producto?",
+            text: "Esta acción eliminará el producto de tu carrito",
+            showDenyButton: true,
+            confirmButtonText: "Sí",
+            denyButtonText: `No`,
+            customClass: {
+                title: 'swal-title',
+                content: 'swal-content',
+                confirmButton: 'swal-confirm',
+                denyButton: 'swal-deny'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                removeItem(id);
+            };
+        });
+    }
+
     const removeItem = (id) => {
         setCart(cart.filter((product) => product.id !== id));
+    }
+
+    const clear = () => {
+        setCart([]);
     }
 
     const confirmClear = () => {
@@ -51,9 +76,6 @@ export const CartProvider = ({ children }) => {
             };
         });
     }
-    const clear = () => {
-        setCart([]);
-    }
 
     const isInCart = (id) => {
         return cart.some(((product) => product.id === id));
@@ -74,7 +96,7 @@ export const CartProvider = ({ children }) => {
     }
 
     return (
-        <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, isInCart, totalOrder, calcItemsQty, confirmClear }}>
+        <CartContext.Provider value={{ cart, setCart, addItem, removeItem, clear, isInCart, totalOrder, calcItemsQty, confirmClear, confirmRemoveItem }}>
             {children}
         </CartContext.Provider>
     )

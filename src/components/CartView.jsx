@@ -4,7 +4,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import '../css/cartView.css';
 
 const CartView = ({ product }) => {
-    const { removeItem } = useContext(CartContext);
+    const { confirmRemoveItem } = useContext(CartContext);
 
     return (
         <div className="cart-item">
@@ -17,7 +17,7 @@ const CartView = ({ product }) => {
                     Precio final: <span style={{ fontWeight: 600 }}>${(product.price * product.quantity).toLocaleString('es-AR')}</span>
                 </p>
             </div>
-            <button className='btn-remove-item' onClick={() => removeItem(product.id)}>
+            <button className='btn-remove-item' onClick={() => confirmRemoveItem(product.id)}>
                 <FaTrashAlt style={{color: 'white'}}/>
             </button>
         </div>
