@@ -1,16 +1,50 @@
-# React + Vite
+# MoodHaus 💡
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción del proyecto 💬
+"**MoodHaus**" es una SPA que simula un e-commerce orientado a la venta de productos para la decoración del hogar. Fue desarrollada como **proyecto final del curso React JS en CoderHouse**, integrando rutas dinámicas, manejo de estados, carrito persistente en LocalStorage, formularios y consumo de Firebase.
 
-Currently, two official plugins are available:
+## Herramientas utilizadas 🛠️
+- **React JS**
+- **Vanilla JavaScript** -> para custom hooks
+- **CSS** -> para estilos.
+- **LocalStorage** -> para guardar el carrito temporalmente de manera persistente.
+- **Git & GitHub** -> para control de versiones
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Librerías utilizadas 📚
 
-## React Compiler
+- **Firebase** -> para base de datos
+- **React-router-dom** -> para navegación
+- **React-icons** -> para íconos
+- **React-spinners** -> para loaders
+- **Sweetalert2** -> para alertas
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instalación 🔌
+1. Clone el repositorio.
 
-## Expanding the ESLint configuration
+2. Muévase a la carpeta raíz del proyecto ejecutando:
+`cd mood-haus`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Instale las dependencias ejecutando:
+`npm install`
+
+4. Para levantar el proyecto de manera local ejecute:
+`npm run dev`
+
+## Versión Host 🌐
+Puede ver el proyecto online en el siguiente enlace:  
+👉 **https://moodhaus.vercel.app/**
+
+## Estado del proyecto 🚧
+**Funcional** como simulador de e-commerce, con:
+- Manejo de carrito  
+- Validación de formulario básica  
+- Resumen de compra  
+
+### Posibles mejoras futuras 🔮
+- Registro de usuario y Login  
+- Integración con métodos de pago  
+- Validaciones más complejas
+
+## Desarrollado por **Macarena De Alessandre** 👩🏻‍💻 
+Proyecto final del curso **React JS – CoderHouse (2025)**
+
