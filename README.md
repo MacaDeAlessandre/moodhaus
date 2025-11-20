@@ -47,4 +47,3 @@ Puede ver el proyecto online en el siguiente enlace:
 
 ## Desarrollado por **Macarena De Alessandre** 👩🏻‍💻 
 Proyecto final del curso **React JS – CoderHouse (2025)**
-
